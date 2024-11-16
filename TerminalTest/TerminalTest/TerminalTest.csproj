@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="id_ed25519" />
+    <None Remove="local_ssh_key.pub" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core.Renci.SshNet" Version="2021.10.2" />
+    <PackageReference Include="WFTerminal" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="id_ed25519">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
